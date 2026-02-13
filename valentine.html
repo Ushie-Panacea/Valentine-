@@ -8,7 +8,79 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Valentine</title>
+    <title>Will you be my Valentine?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #ffcccb, 0deg, #ff9999, 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container{
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 2.5rem;
+            color: #ff1493;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,1)
+        }
+
+        .heart{
+            width: 100px;
+            height: 100px;
+            background: #f20044;
+            position: relative;
+            margin: 30px auto;
+            transform: rotate(-45deg);
+            animation: heartbeat 1.2s infinite 
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: #f20044;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+            }
+
+        .heart::after {
+        left: 50px;
+        top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: rotate(-45deg) scale(1);
+                }
+            25% {
+                transform: rotate(-45deg) scale(1.1);
+            }
+            50% {
+                transform: rotate(-45deg) scale(1);
+            }
+        }
+        
+    </style>
 
 </head>
 
