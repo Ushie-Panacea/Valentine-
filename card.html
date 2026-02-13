@@ -179,7 +179,7 @@
 </head>
 <body>
 
-    <audio loop id="mySong" style="display: none;">
+    <audio autoplay style="display: none;">
         <source src="Ushie-Panacea/Valentine-/Calum-Scott-You-Are-The-Reason-(AmkLoaded).mp3" type="mpeg">
     </audio>
     
@@ -243,11 +243,6 @@
         function openCard() {
             const card = document.getElementById('card');
             card.classList.toggle('opened');
-            const cards = document.getElementById('cards');
-              cards.classList.add('open');
-            //document.getElementById('mySong').play();//
-            const audio=document.getElementById('mySong');
-            
         }
     </script>
                                                                                                                 
