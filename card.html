@@ -32,7 +32,147 @@
             transition: transform 0.8s;
         }
 
+        .card-container.opened {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-inside {
+             position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            }
         
+        .card-front {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 150px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .envelope-flap {
+            position: absolute;
+            width: 0;
+            height: 0;
+             border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 75px solid #ffb3d9;
+            top: 0;
+            left: 0;
+            animation: flap 2s ease-in-out infinite;                                                                                                                        
+        }
+
+        @keyframes flap {
+            0%, 100% { transform: rotateX(0deg); }
+            50% { transform: rotateX(-20deg); }
+        }
+        
+        .envelope-body {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background: #ffc0cb;
+            bottom: 0;
+            border-radius: 0 0 10px 10px;                                                                          
+        }
+
+        .card-front h1 {
+            color: white;
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .card-front p {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .card-inside {
+            background: white;
+            transform: rotateY(180deg);
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .letter-content {
+            text-align: center;
+        }
+
+        .letter-content h2 {
+            color: #ff1493;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .letter-content p {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .signature {
+            text-align: right;
+            font-style: italic;
+            color: #ff1493;
+            margin-top: 30px;
+            font-size: 1.3rem;
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart-float {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 4s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+            transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-container {
+                width: 90%;
+                height: 600px;
+            }
+            .card-front h1 {
+                font-size: 1.8rem;
+            }
+            .letter-content h2 {
+                font-size: 1.5rem;
+            }
+            .letter-content p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -90,6 +230,14 @@
         </div>
     </div>
 
+
+
+    <script>
+        function openCard() {
+            const card = document.getElementById('card');
+            card.classList.toggle('opened');
+        }
+    </script>
                                                                                                                 
 </body>
 </html>
