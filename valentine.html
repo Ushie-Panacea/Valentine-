@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Will you be my Valentine?</title>
+
     <style>
         * {
             margin: 0;
@@ -18,7 +19,7 @@
 
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background: aliceblue;
+            background-color: #f20044;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -81,55 +82,8 @@
             }
         }
 
-        .buttons {
-            margin-top: 50px;
-            position: relative;
-            height: 150px;
-        }
+        button{
 
-        button {
-            font-size: 1.5rem;
-            padding: 15px 40px;
-            margin: 0 15px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .yes-btn {
-            background: #ff69b4;
-            color: white;
-        }
-
-        .yes-btn:hover {
-        transform: scale(1.1);
-        background: #ff1493;
-        }
-    
-        .no-btn {
-        background: #fff;
-        color: #ff1493;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        }
-
-        .no-btn:hover {
-        background: #ffe6f0;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-                                                                
-            button {
-                font-size: 1.2rem;
-                padding: 12px 30px;
-            }
         }
 
     </style>
@@ -146,7 +100,7 @@
               <button class="no-btn" id="noBtn">No</button>
           </div>
     </div>
-    
+
 
 </body>
 
