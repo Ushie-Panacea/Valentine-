@@ -253,19 +253,3 @@
                                                                                                                 
 </body>
 </html>
-
-function openCard() {
-      const card = document.getElementById('card');
-        
-          // Use the class name that matches your CSS (likely 'open')
-            card.classList.add('open');
-
-              // This will now trigger because the code above is fixed
-                const audio = document.getElementById('mySong');
-                  if (audio) {
-                      audio.play().catch(error => {
-                            console.log("Audio playback failed:", error);
-                                });
-                                  }
-                                  }
-}
