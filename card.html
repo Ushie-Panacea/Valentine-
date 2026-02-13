@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffcccb 0%, #ff9999 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .card-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="hearts">
+        <span class="heart-float" style="left: 10%; top: 20%;">❤️</span>
+        <span class="heart-float" style="left: 80%; top: 30%; animation-delay: 1s;">💕</span>
+        <span class="heart-float" style="left: 15%; top: 70%; animation-delay: 2s;">💖</span>
+        <span class="heart-float" style="left: 85%; top: 60%; animation-delay: 1.5s;">💗</span>
+    </div>
+
+    <div class="card-container" id="card" onclick="openCard()">
+        <div class="card-front">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+            </div>
+            <h1>Happy Valentine<br>My Love 💕</h1>
+            <p>Click to open</p>
+        </div>
+
+        <div class="card-inside">
+            <div class="letter-content">
+                <h2>My Dearest Valentine 💖</h2>
+                                                        
+                <p>
+                    From the moment I met you, my world became brighter, 
+                    my days became sweeter, and my heart became fuller. 
+                    You are the melody in my life's song, the color in 
+                    my canvas, and the reason behind my smile.
+                </p>
+                                                                                                                                                                                        
+                <p>
+                    Every day with you is a precious gift. Your laughter 
+                    is my favorite sound, your happiness is my 
+                    wish, and your love is my treasured possession.
+                </p>
+                                                                                                                                                                                                                                                                                                    
+                <p>
+                    Thank you for being you – for your kindness, your 
+                    warmth, your patience, and your love. Thank you for making 
+                    every ordinary moment feel extraordinary.
+                </p>
+
+                <p>
+                    On this Valentine's Day and every day, I want you 
+                    to know: You are loved, you are cherished, and you 
+                    are the best thing that ever happened to me.
+                </p>
+                                                                                                                
+                <div class="signature">
+                    With all my love 💕
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                                                                                
+</body>
+</html>
