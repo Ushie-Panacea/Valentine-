@@ -36,7 +36,6 @@
             font-size: 2.5rem;
             font-style: oblique;
             color: #ff1493;
-            margin-top: 20px;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0,0,0,1)
         }
@@ -46,7 +45,7 @@
             height: 100px;
             background: #f20044;
             position: relative;
-            margin: 30px auto;
+            margin: 50px auto;
             transform: rotate(-45deg);
             animation: heartbeat 1.2s infinite
         }
@@ -86,7 +85,11 @@
         .buttons {
             margin-top: 50px;
             position: relative;
-            height: 150px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
         }
 
         button {
@@ -114,9 +117,7 @@
         .no-btn {
             background: #fff;
             color: #ff1493;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            position: fixed;
         }
 
         .no-btn:hover {
@@ -149,6 +150,39 @@
           </div>
     </div>
 
+    <script>
+        const noBtn = document.getElementById('noBtn');
+                
+        noBtn.addEventListener('mouseover', function() {
+            const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+            const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+                                                            
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+                                                                                                
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        });
+
+        noBtn.addEventListener('click', function() {
+            const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+            const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+                                                
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+                                                                                    
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        })
+
+        function sayYes() {
+            alert('Yay! 💕 I knew you would say yes! 💖🫠😌🤭');
+            window.location.href = 'card.html';
+                    
+        }
+    </script>
 
 </body>
 
