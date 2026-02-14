@@ -140,8 +140,7 @@
 
 <body>
 
-    <audio autoplay loop style="display: none;">
-        <!--  <source src="Ushie-Panacea/Valentine-/will you be my valentine .mp3" type="audio/mpeg"> -->     
+    <audio id="bgMusic" autoplay loop style="display: none;">   
           <source src="will you be my valentine .mp3" type="mpeg">    
     </audio>
 
@@ -188,6 +187,16 @@
             window.location.href = 'card.html';
                     
         }
+
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.volume = 0.3; // 30% volume
+                                    
+            // Play on first click (browsers block autoplay)
+            document.addEventListener('click', function() {
+                bgMusic.play().catch(e => console.log('Audio failed'));
+            }, { once: true });
+                                                                        
+                                                                        
     </script>
 
 </body>
