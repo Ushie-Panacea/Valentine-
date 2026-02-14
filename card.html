@@ -179,8 +179,7 @@
 </head>
 <body>
 
-    <audio autoplay style="display: none;">
-      <!--  <source src="Ushie-Panacea/Valentine-/Calum-Scott-You-Are-The-Reason-(AmkLoaded).mp3" type="mpeg">-->
+    <audio id="bgMusic" style="display: none;">
         <source src="Calum-Scott-You-Are-The-Reason-(AmkLoaded).mp3" type="mpeg">
     </audio>
     
@@ -245,6 +244,13 @@
             const card = document.getElementById('card');
             card.classList.toggle('opened');
         }
+
+        const music = document.getElementById('bgMusic');
+            music.volume = 0.3;
+                
+            document.addEventListener('click', function() {
+                music.play().catch(e => console.log('Audio failed'));
+            }, { once: true });
     </script>
                                                                                                                 
 </body>
